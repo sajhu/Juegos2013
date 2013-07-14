@@ -25,12 +25,8 @@ include_once(MAIN_FOLDER.	'core.View.php');
 // --- Inicio del ORM Propel (Manejo Base de Datos)
 // --------------------------------------------
 
-// Include the main Propel script
-require_once(MODEL_FOLDER.'/vendor/propel/runtime/lib/Propel.php');
-// Initialize Propel with the runtime configuration
-Propel::init(MODEL_FOLDER."/build/conf/actWeb-conf.php");
-// Add the generated 'classes' directory to the include path
-set_include_path(MODEL_FOLDER."/build/classes" . PATH_SEPARATOR . get_include_path());
+	global $DB;
+	$DB = new MySQL(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST);
 
 // --------------------------------------------
 // --- Constructor
@@ -50,8 +46,8 @@ set_include_path(MODEL_FOLDER."/build/classes" . PATH_SEPARATOR . get_include_pa
 		define("USER_ID", getSession('id'));
 		#$userVars = $DB->Select('USERS', array('id' => USER_ID));
 				
-		define('USER_ROLE', CELADOR_ROLE);  #Needs to be set to the actual user's role, for example: $userVars['role']
-		define('USER_DISPLAY_NAME', getSession('user'));
+		define('USER_ROLE', ADMIN_ROLE);  #Needs to be set to the actual user's role, for example: $userVars['role']
+		define('USER_DISPLAY_NAME', getSession('admin'));
 
 
 // --------------------------------------------

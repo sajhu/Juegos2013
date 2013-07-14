@@ -45,7 +45,7 @@
 
 <body>
 		<!-- start: Header -->
-	<div class="navbar" style="overflow: hidden">
+	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
@@ -53,7 +53,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="./index.php"><img src="<?php echo IMAGE_URL ?>logo-pagina.png" alt="Juegos 2013 Admin" style="margin: -10px; margin-top: -13px;padding: 0px;" ></a>
+				<a class="brand" href="./index.html"><img src="<?php echo IMAGE_URL ?>logo-pagina.png" alt="Activar ERP" style="margin: -10px; margin-top: -13px;padding: 0px;" ></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -162,7 +162,7 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Gicel Andrea
+								<i class="halflings-icon white user"></i> Camilo Vargas
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -187,10 +187,17 @@
 			<div id="sidebar-left" class="span1">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-						<li<?php if($_SERVER['REQUEST_URI'] == BASE_URL) echo ' class="active"';?>><a href="./index.php"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Reportes</span></a></li>
-
-						<li><a href="programacion.php"><i class="fa-icon-check"></i><span class="hidden-tablet"> Programación</span></a></li>
-			
+						<li<?php if($_SERVER['REQUEST_URI'] == BASE_URL) echo ' class="active"';?>><a href="./index.php"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Resumen</span></a></li>
+						<li><a href="clientes.php"><i class="fa-icon-group"></i><span class="hidden-tablet"> Clientes</span></a></li>	
+						<li><a href="inventarios.php"><i class="fa-icon-truck"></i><span class="hidden-tablet"> Inventarios</span></a></li>
+						<li><a href="#"><i class="fa-icon-check"></i><span class="hidden-tablet"> Autorizaciones</span></a></li>
+						<li><a href="#"><i class="fa-icon-book"></i><span class="hidden-tablet"> Contratos</span></a></li>
+						<li><a href="#"><i class="fa-icon-camera"></i><span class="hidden-tablet"> Archivo Fotográfico</span></a></li>
+						<li><a href="#"><i class="fa-icon-file"></i><span class="hidden-tablet"> Documentos</span></a></li>
+						<li><a href="#"><i class="fa-icon-money"></i><span class="hidden-tablet"> Facturación</span></a></li>
+						<li><a href="#"><i class="fa-icon-user"></i><span class="hidden-tablet"> Usuarios</span></a></li>
+						<li><a href="#"><i class="fa-icon-home"></i><span class="hidden-tablet"> Sedes</span></a></li>
+						<li><a href="#"><i class="fa-icon-edit"></i><span class="hidden-tablet"> Registros</span></a></li>
 					</ul>
 				</div>
 			</div>

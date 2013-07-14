@@ -22,14 +22,13 @@
 // --------------------------------------------
 
 	// Default page <title></title>
-	define('DEFAULT_TITLE', 'FurrySkeleton');
+	define('DEFAULT_TITLE', 'Juegos 2013');
 
 // --------------------------------------------
 
 	// * User Roles *
 	// Add or change the names and levels of the roles as you which, this is an example
 	define('ADMIN_ROLE', 10);
-	define('MOD_ROLE', 5);
 	define('USER_ROLE', 1);
 
 	// Session Times in seconds
@@ -40,9 +39,9 @@
 // --------------------------------------------
 
 	// * Database connections *
-	define('DB_NAME', 					'database_name'		);
-	define('DB_USER', 					'database_user'		);
-	define('DB_PASSWORD', 				'database_password'	);
+	define('DB_NAME', 					'juegos2013'		);
+	define('DB_USER', 					'root'		);
+	define('DB_PASSWORD', 				'coovxpexrask'		);
 	define('DB_HOST', 					'localhost'			); 
 
 
@@ -53,7 +52,6 @@
 	define('MAIN_FOLDER', __DIR__ . DS);
 
 	define('MODEL_FOLDER', MAIN_FOLDER.		'model'		.DS);
-	define('VIEW_FOLDER', MAIN_FOLDER.		'view'		.DS);
 	define('LIB_FOLDER', MODEL_FOLDER.		'lib'		.DS);
 
 	define('STATIC_FOLDER', MAIN_FOLDER.	'static'	.DS);
@@ -61,7 +59,6 @@
 	define('JS_FOLDER', STATIC_FOLDER.		'js' 		.DS);
 	define('CSS_FOLDER', STATIC_FOLDER.		'css' 		.DS);
 
-	define('UPLOAD_FOLDER', MAIN_FOLDER.	'uploads' 	.DS);
 
 	// --------------- 			^				^
 	// In this section, local and remote atributes must refer to the same folder
@@ -70,7 +67,7 @@
 	// Global remote folders
 
 
-	define('BASE_URL', 						'/FurrySkeleton/'); // everything after example.com
+	define('BASE_URL', 						'/Juegos2013/'); // everything after example.com
 	define('BASE_DOMAIN', 					'http://localhost'. BASE_URL); // Complete url to main folder
 
 
@@ -78,7 +75,6 @@
 	define('CSS_URL', BASE_URL. 			'static/css/'	);
 	define('IMAGE_URL', BASE_URL. 			'static/img/'	);
 
-	define('UPLOAD_URL', BASE_URL. 			'uploads/'		);
 
 	define('ACTUAL_URL', $_SERVER['PHP_SELF']); // Don't edit this one
 

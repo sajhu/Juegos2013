@@ -1,7 +1,7 @@
 				<div class="row-fluid hideInIE8">	
 				<div class="box span12">
 					<div class="box-header">
-						<h2><i class="halflings-icon fire"></i><span class="break"></span>Indicadores Semanales</h2>
+						<h2><i class="halflings-icon fire"></i><span class="break"></span>Reportes</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
@@ -72,89 +72,6 @@
 				
 			</div><!--/row-->		
 
-			<div class="row-fluid">	
-				<div class="box span12">
-
-					<div class="box-header">
-						<h2><i class="halflings-icon bullhorn"></i><span class="break"></span>Estadísticas Mensuales</h2>
-
-						<div class="box-icon">
-							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-						</div>
-					</div>
-					<div class="box-content">
-						<div class="stats-date span3">
-							<div class="range">01/05/2013 - 01/06/2013</div>
-						</div>
-						
-						<div class="stats">
-							
-							<div class="stat">
-								<div class="left">
-									<div class="number green">1.324.996</div>
-									<div class="title"><span class="color green"></span> Ocupación</div>
-								</div>
-								<div class="right">	
-									<div class="arrow">
-										<img src="<?php echo IMAGE_URL ?>uparrow.png" />
-									</div>
-									<div class="percent">+13%</div>
-								</div>
-							</div>
-							
-							<div class="stat">
-								<div class="left">
-									<div class="number yellow">12.894.765</div>
-									<div class="title"><span class="color yellow"></span> Visitas</div>
-								</div>
-								<div class="right">	
-									<div class="arrow">
-										<img src="<?php echo IMAGE_URL ?>uparrow.png" />
-									</div>
-									<div class="percent">+17%</div>
-								</div>
-							</div>
-							
-							<div class="stat">
-								<div class="left">
-									<div class="number blue">432.980</div>
-									<div class="title"><span class="color blue"></span> Ingresos</div>
-								</div>
-								<div class="right">	
-									<div class="arrow">
-										<img src="<?php echo IMAGE_URL ?>downarrow.png" />
-									</div>
-									<div class="percent">-33%</div>
-								</div>
-							</div>
-							
-							<div class="stat">
-								<div class="left">
-									<div class="number red">11.324</div>
-									<div class="title"><span class="color red"></span> Retiros</div>
-								</div>
-								<div class="right">	
-									<div class="arrow">
-										<img src="<?php echo IMAGE_URL ?>uparrow.png" />
-									</div>
-									<div class="percent">+17%</div>
-								</div>
-							</div>
-								
-						</div>
-
-
-						<div class="row-fluid">
-							
-						<div id="stats-chart2" class="span12" style="height:300px"></div>
-						
-						</div>		
-					</div>		
-
-				</div><!--/span-->
-			</div><!--/row-->
-
 
 			
 			<hr />
@@ -163,7 +80,7 @@
 
 				<div class="box span7" ontablet="span12" ondesktop="span7">
 					<div class="box-header">
-						<h2><i class="halflings-icon tasks"></i><span class="break"></span> Lotes por Cliente</h2>
+						<h2><i class="halflings-icon tasks"></i><span class="break"></span> Ejemplo</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
@@ -249,7 +166,7 @@
 
 				<div class="box span5" ontablet="span12" ondesktop="span5">
 					<div class="box-header">
-						<h2><i class=" halflings-icon globe"></i><span class="break"></span> Navegadores</h2>
+						<h2><i class=" halflings-icon globe"></i><span class="break"></span> Ejemplo</h2>
 						<div class="box-icon">
 							<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
 							<a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>

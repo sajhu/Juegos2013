@@ -21,7 +21,7 @@
 // --------------------------------------------
 
 	// Default page <title>
-	define('DEFAULT_TITLE', 'Activar ERP');
+	define('DEFAULT_TITLE', 'Admin Juegos 2013');
 
 
 // --------------------------------------------
@@ -31,8 +31,6 @@
 	define('MAIN_FOLDER', dirname(__FILE__) . DS);
 
 	define('MODEL_FOLDER', MAIN_FOLDER.		'model'		.DS);
-	define('VIEW_FOLDER', MAIN_FOLDER.		'view'		.DS);
-	define('ENTITY_FOLDER', MAIN_FOLDER.	'entity'	.DS);
 	define('LIB_FOLDER', MODEL_FOLDER.		'lib'		.DS);
 
 	define('STATIC_FOLDER', MAIN_FOLDER.	'static'	.DS);
@@ -40,7 +38,6 @@
 	define('JS_FOLDER', STATIC_FOLDER.		'js' 		.DS);
 	define('CSS_FOLDER', STATIC_FOLDER.		'css' 		.DS);
 
-	define('UPLOAD_FOLDER', MAIN_FOLDER.	'uploads' 	.DS);
 
 	// --------------- 			^				^
 	// In this section, local and remote atributes must refer to the same folder
@@ -49,9 +46,9 @@
 	// Global remote folders
 	define('ACTUAL_URL', $_SERVER['PHP_SELF']); // Don't edit this one
 
-	define('BASE_PAGE', 					'http://localhost/ActWeb/admin/');
+	define('BASE_PAGE', 					'http://localhost');
 
-	define('BASE_URL', 						'/ActWeb/admin/'); // everything after example.com
+	define('BASE_URL', 						'/Juegos2013/admin/'); // everything after example.com
 	define('JS_URL', BASE_URL. 				'static/js/'	);
 	define('CSS_URL', BASE_URL. 			'static/css/'	);
 	define('IMAGE_URL', BASE_URL. 			'static/img/'	);

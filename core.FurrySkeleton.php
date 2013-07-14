@@ -28,8 +28,9 @@ include_once(MAIN_FOLDER.	'core.View.php');
 
 	// Checking for a correct session
 	handdleSession();
-
-	//$DB = new MySQL(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST);
+	
+	global $DB;
+	$DB = new MySQL(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST);
 
 // --------------------------------------------
 // --- Session Globals - **** PLEASE EDIT HERE ***
@@ -40,7 +41,11 @@ include_once(MAIN_FOLDER.	'core.View.php');
 		define("USER_ID", getSession('id'));
 		#$userVars = $DB->Select('USERS', array('id' => USER_ID));
 				
-		define('USER_ROLE', SECOND_ROLE);  #Needs to be set to the actual user's role, for example: $userVars['role']
+		$juego = $DB->Select('juegos', array('id' => getSession('juego')));
+
+		define('USER_GAME', getSession('juego')); 
+		define('USER_GAME_NAME', $juego['nombre']); 
+		define('USER_ROLE', USER_ROLE);  
 		define('USER_DISPLAY_NAME', getSession('user')); // By default uses username, should consider changing it to user's full name
 
 

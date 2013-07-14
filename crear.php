@@ -23,49 +23,64 @@
 	$estado = 0;
 	
 	$mensajes = array('',
-		'Credenciales proporcionadas invalidas.');
+		'Por favor complete todos los campos',
+		'Error al insertar en la base de datos',
+		'Usuario creado con éxito');
 
 	// Manage asked redirection after success login
-	$url = BASE_URL;
+	$url = BASE_URL.'login.php';
 	if(isset($_GET['redirectTo']) && $_GET['redirectTo'] != '')
 		$url = addslashes(htmlspecialchars(trim($_GET['redirectTo'])));
 
 	// When form is sended
-	if(isset($_POST['login']))
+	if(isset($_POST['crear']))
 	{
-
 			include_once(LIB_FOLDER.'MySQL.php');
 			include_once(LIB_FOLDER.'PasswordHash.php');
 
-		$username = post('username');
-		$password = $_POST['password']; // should no be sanitized as it will be only hashed and compared to stored value of user
-
-		$DB = new MySQL(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST);
+		$nombre = post('nombre');
+		$apellido = post('apellido');
+		$correo = post('correo');
+		$sede = post('sede');
+		$ciudad = post('ciudad');
 
 		$t_hasher = new PasswordHash(8, TRUE);
 
-		$user = $DB->Select('jugadores', array('correo' => $username));
+		$password = $t_hasher->HashPassword(post('password'));
 
-		if(!$user && $DB->lastError != '')
-		{
-			$estado = 1; // no se encontró usuario por ese correo
-		}
+		$array = array(
+			'nombre' => $nombre,
+			'apellido' => $apellido,
+			'correo' => $correo,
+			'sede' => $sede,
+			'ciudad' => $ciudad,
+			'password' => $password
+			);
+
 		//TODO check credentials
-		else if($t_hasher->CheckPassword($password, $user['password']))
+		if($nombre =! '' && $password =! '' && $correo != '')
 		{
-			session_start();
-				setSession('id', $user['id']);
-				setSession('user', $username);
-				setSession('juego', $user['juego']);
-				setSession('hash', $user['password']);
-				setSession('CREATED', time());
-				setSession('LAST_ACTIVITY', time());
 
-			header("Location: " . $url); // Redirect
+			$DB = new MySQL(DB_NAME, DB_USER, DB_PASSWORD, DB_HOST);
+
+
+			$DB->Insert('jugadores', $array);
+			if($DB->lastError != '')
+			{
+				$estado = 2;
+				$mensajes[$estado] .= $DB->lastError;
+			}
+			else
+			{
+				$estado = 3;
+				header("Location: " . $url); // Redirect
+			}
+
+				
 		}
 		else
 		{
-			$estado = 1; //el password no coincide, se expide el mismo error
+			$estado = 1;
 		}
 
 	}
@@ -76,7 +91,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8" />
-	<title>Login - <?php echo DEFAULT_TITLE;?></title>
+	<title>Crear Cuenta - <?php echo DEFAULT_TITLE;?></title>
 	<meta name="description" content="ACME Dashboard Bootstrap Admin Template." />
 	<meta name="author" content="Łukasz Holeczek" />
 	<meta name="keyword" content="ACME, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
@@ -111,7 +126,7 @@
 	<!-- end: Favicon -->
 	
 		<style type="text/css">
-			body { background: url(<?php echo IMAGE_URL;?>bg-futbol.jpg) !important; }
+			body { background: url(<?php echo IMAGE_URL;?>bg-login.jpg) !important; }
 		</style>
 		
 		
@@ -126,30 +141,42 @@
 				<div class="login-box">
 					<div class="icons">
 						<a href="<?php echo BASE_URL;?>"><i class="icon-home"></i></a>
-						<a href="<?php echo BASE_URL;?>contact.html"><i class=" icon-envelope"></i></a>
+						<a href="<?php echo BASE_URL;?>ayuda.php"><i class=" icon-envelope"></i></a>
 					</div>
-					<h1 style="margin-left: 30px;">Bienvenido a los Juegos 2013!</h1>
+					<h1 style="margin-left: 30px;">Crear Cuenta para los Juegos 2013!</h1>
 
 
-					<div style="text-align:center;">
-						<span id="signinButton">
-						  <span
-						    class="g-signin"
-						    data-callback="signinCallback"
-						    data-clientid="578923594429.apps.googleusercontent.com"
-						    data-cookiepolicy="single_host_origin"
-						    data-requestvisibleactions="http://schemas.google.com/AddActivity"
-						    data-scope="https://www.googleapis.com/auth/plus.login"
-						    data-width="wide">
-						  </span>
-						</span>
-					</div>
+
 					<form class="form-horizontal" action="<?php echo ACTUAL_URL?>?redirectTo=<?php echo $url;?>" method="post" >
 						<fieldset class="login-box-content">
 							
-							<div class="input-prepend" title="Username">
+							<div class="input-prepend" title="Nombres">
 								<span class="add-on"><i class=" icon-user"></i></span>
-								<input class="" name="username" id="username" type="text" placeholder="Usuario" />
+								<input class="" name="nombre" id="nombre" type="text" placeholder="Nombres" />
+							</div>
+							<div class="clearfix"></div>
+							
+							<div class="input-prepend" title="Apellidos">
+								<span class="add-on"><i class="icon-book"></i></span>
+								<input class="" name="apellido" id="apellido" type="text" placeholder="Apellidos" />
+							</div>
+							<div class="clearfix"></div>
+							
+							<div class="input-prepend" title="Correo">
+								<span class="add-on"><i class="icon-envelope"></i></span>
+								<input class="" name="correo" id="correo" type="text" placeholder="Correo Electrónico" />
+							</div>
+							<div class="clearfix"></div>
+							
+							<div class="input-prepend" title="Sede">
+								<span class="add-on"><i class=" icon-home"></i></span>
+								<input class="" name="sede" id="sede" type="text" placeholder="Sede" />
+							</div>
+							<div class="clearfix"></div>
+							
+							<div class="input-prepend" title="Ciudad">
+								<span class="add-on"><i class="  icon-globe"></i></span>
+								<input class="" name="ciudad" id="ciudad" type="text" placeholder="Ciudad" />
 							</div>
 							<div class="clearfix"></div>
 
@@ -161,21 +188,16 @@
 <?php
 	if($estado > 0)
 	{
-		echo '							<div class="alert alert-error" style="margin: 30px;">
+		echo '
+							<div class="alert alert-error" style="margin: 30px;">
 								<i class=" fa-icon-warning-sign"></i> '.$mensajes[$estado].'
 							</div>';
 	}
 ?>
-							<br><br><br>
 
-							<a href="crear.php">¡Aún no tengo cuenta!</a>
-
-							<br><br>
-
-							<a href="admin">Admin Panel</a>	
 
 							<div class="button-login">	
-								<button type="submit" name="login" class="btn btn-large">Entrar</button>
+								<button type="submit" name="crear" value="crear" class="btn btn-large btn-info">Crear mi Cuenta</button>
 							</div>
 							<div class="clearfix"></div>
 					</form>
@@ -211,5 +233,6 @@
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
      })();
     </script>
+
 </body>
 </html>

@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../font/icomoon.eot');
+	src:url('../font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../font/icomoon.svg#icomoon') format('svg'),
+		url('../font/icomoon.woff') format('woff'),
+		url('../font/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icomoons */
+[data-icomoon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icomoon);
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icomoon */
+[class^="icomoon-"]:before, [class*=" icomoon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+.icomoon-arrow-left:before {
+	content: "\e007";
+}
+.icomoon-arrow-right:before {
+	content: "\e006";
+}
+.icomoon-cross:before {
+	content: "\e005";
+}
+.icomoon-facebook:before {
+	content: "\e001";
+}
+.icomoon-twitter:before {
+	content: "\e000";
+}
+.icomoon-google-plus:before {
+	content: "\e002";
+}
+.icomoon-vimeo:before {
+	content: "\e003";
+}
+.icomoon-yahoo:before {
+	content: "\e004";
+}
+.icomoon-feed:before {
+	content: "\e008";
+}
+.icomoon-dribbble:before {
+	content: "\e009";
+}
+.icomoon-flickr:before {
+	content: "\e00a";
+}
+.icomoon-tag-fill:before {
+	content: "\e00b";
+}
+.icomoon-map-pin-alt:before {
+	content: "\e00c";
+}
+.icomoon-plus:before {
+	content: "\e00d";
+}
+.icomoon-info:before {
+	content: "\e04b";
+}
+.icomoon-expand:before {
+	content: "\e03c";
+}
+.icomoon-search:before {
+	content: "\e00e";
+}
+.icomoon-comments:before {
+	content: "\e010";
+}
+.icomoon-anchor:before {
+	content: "\e058";
+}
+.icomoon-email:before {
+	content: "\e011";
+}
+.icomoon-magnifying-glass:before {
+	content: "\e012";
+}
+.icomoon-electricity:before {
+	content: "\e03e";
+}
+.icomoon-stats:before {
+	content: "\e023";
+}
+.icomoon-cog:before {
+	content: "\e01f";
+}
+.icomoon-zoom-in:before {
+	content: "\e026";
+}
+.icomoon-movie:before {
+	content: "\e00f";
+}
+.icomoon-user:before {
+	content: "\e028";
+}
+.icomoon-calendar:before {
+	content: "\e013";
+}
+.icomoon-folder:before {
+	content: "\e014";
+}
+.icomoon-pencil:before {
+	content: "\e015";
+}

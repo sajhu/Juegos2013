@@ -1,13 +1,20 @@
 <?php
 /**
- * FurrySkeleton WebApp Framework
- * for quick developement of Bootstrap based PHP apps.
+ * Activar SAS ERP
+ * aplicacion para www.activarsas.com Copyright (C) Activar SAS
  *
  * Developed by:
  * 	Santiago Rojas - www.santiagorojas.co
+ *  Sergio Hernandez Charpak 
  *
- * check for latest updates at https://github.com/sajhu/FurrySkeleton
+ * basado en el FrameWork FurrySkeleteton - https://github.com/sajhu/FurrySkeleton
  */
+
+ // -----------------------------------------------
+
+ // Esta pagina es especial, pues en esta es donde se crea la sesión de usuario
+ // por lo tanto, al incluir al core.FurrySkeleton, este intentaría enviarme de nuevo aquí
+ // Si no existe una sesión válida
  
  // -----------------------------------------------	
 
@@ -19,7 +26,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8" />
-	<title>Not Found - <?php echo DEFAULT_TITLE;?></title>
+	<title>No encontrado - Juegos 2013</title>
 	<meta name="description" content="ACME Dashboard Bootstrap Admin Template." />
 	<meta name="author" content="Łukasz Holeczek" />
 	<meta name="keyword" content="ACME, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />
@@ -72,14 +79,14 @@
 						<a href="../contactenos.html"><i class="halflings-icon info-sign"></i></a>
 					</div>
 					<div style="text-align:center;">
-						<img src="<?php echo IMAGE_URL;?>logo-login.png" alt="<?php echo DEFAULT_TITLE;?>">
+						<img src="<?php echo IMAGE_URL;?>FurrySkeleton.png" alt="FurrySkeleton" width="200">
 					</div>
 						<fieldset>
-							<h1 style="margin-left: 30px;">Not Found</h1>
-							<p><strong>Error 404:</strong> We're sorry, the page you're trying to access doesn't exist.</p>
+							<h1 style="margin-left: 30px;">No Encontrado</h1>
+							<p><strong>Error 404:</strong> Lo sentimos, la página a la que intenta acceder no existe.</p>
 							<p class="pull-right">
 								<br>	
-								<a href="<?php echo BASE_PAGE;?>contactus.php" class="bnt btn-large btn-info">Help</a>
+								<a href="<?php echo BASE_PAGE;?>ayuda.php" class="bnt btn-large btn-info">Ayuda</a>
 							</p>
 						
 				</fieldset></div><!--/span-->
@@ -92,7 +99,7 @@
 	<div id="footer" class="powered">
 		<?php
 				if(@include('http://santiagorojas.co/credits.php'));
-				else print('<p>Powered by <a href="http://santiagorojas.co">FurrySkeleton</a></p>');
+				else print('<p>is Powered by <a href="http://santiagorojas.co">FurrySkeleton</a></p>');
 		?>
 	</div>
 	<!-- start: JavaScript-->

@@ -1,18 +1,8 @@
 <?php
-/**
- * FurrySkeleton WebApp Framework
- * for quick developement of Bootstrap based PHP apps.
- *
- * Developed by:
- * 	Santiago Rojas - www.santiagorojas.co
- *
- * check for latest updates at https://github.com/sajhu/FurrySkeleton
- */
 
 	/**
 	 * Prints the page
-	 * @param $title		string			the title to display in the page header
-	 * @param $title		string/path		the path to include inside template's content
+	 * @param $title the title to display in the page header
 	 */
 	function printPage($titleN = DEFAULT_TITLE, $includeN)
 	{
@@ -29,8 +19,8 @@
 
 	/**
 	 * Prints an error message badge
-	 * @param $errorMessage 	string		the error message to be displayed, can contain HTML inside
-	 * @param $total 			boolean		wether to display the message in an entire page and die (true) or just the badge (false)
+	 * @param $errorMessage String - the error message to be displayed, can contain HTML inside
+	 * @param $total boolean - wether to display the message in an entire page and die (true) or just the badge (false)
 	 */
 	function printError($errorMessage, $total = FALSE)
 	{

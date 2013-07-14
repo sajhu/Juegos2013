@@ -19,7 +19,6 @@
  // -----------------------------------------------	
 
 	include_once('core.Settings.php');
-	include_once(MODEL_FOLDER.'mod.Clientes.php');
 
 
 	$estado = 0;
@@ -39,11 +38,11 @@
 		$password = $_POST['password']; // should no be sanitized as it will be only hashed and compared to stored value of user
 
 		//TODO check credentials
-		if(login($user, $password))
+		if($user == 'admin' && $password == 'admin')
 		{
 			session_start();
 			$_SESSION['id'] = 0;
-			$_SESSION['user'] = $user;
+			$_SESSION['admin'] = $user;
 			$_SESSION['CREATED'] = time();
 			$_SESSION['LAST_ACTIVITY'] = time();
 
@@ -114,9 +113,9 @@
 						<a href="../"><i class="halflings-icon home"></i></a>
 						<a href="../contactenos.html"><i class="halflings-icon info-sign"></i></a>
 					</div>
-					<h1 style="margin-left: 30px;">Bienvenido al ERP</h1>
+					<h1 style="margin-left: 30px;">Bienvenido al Admin</h1>
 					<div style="text-align:center;">
-						<img src="<?php echo IMAGE_URL;?>logo-login.png" alt="Activar SAS - ERP">
+						<img src="<?php echo IMAGE_URL;?>FurrySkeleton.png" alt="Juegos 2013 Admin" width="200">
 					</div>
 					<form class="form-horizontal" action="login.php?redirectTo=<?php echo $url;?>" method="post" >
 						<fieldset>
@@ -142,7 +141,6 @@
 ?>
 							
 
-							<label class="remember" for="remember"><input name="remember" type="checkbox" id="remember"> Recordarme</label>
 
 							<div class="button-login">	
 								<button type="submit" name="login" class="btn btn-large btn-info">Ingresar</button>

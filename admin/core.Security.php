@@ -19,7 +19,7 @@
 			}
 
 			//TODO should re-verify hash
-			else if(!isset($_SESSION['user']) || !isset($_SESSION['id'])) // there is a session
+			else if(!isset($_SESSION['admin']) || !isset($_SESSION['id'])) // there is a session
 			{
 				header('Location: '.LOGIN_PAGE.'?redirectTo='.ACTUAL_URL);
 			}
