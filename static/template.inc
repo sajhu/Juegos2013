@@ -15,6 +15,8 @@
       <link href="<?php echo CSS_URL;?>fancybox.css" rel="stylesheet">
       <!-- icomoon icons font  -->
       <link href="<?php echo CSS_URL;?>icomoon.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css' />
+
       <!-- sequence slider styles -->
       <!--[if lt IE 8]>
       <link rel="stylesheet" type="text/css" media="screen" href="css/sequencejs_ie.css" />

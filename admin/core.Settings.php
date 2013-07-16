@@ -82,9 +82,9 @@
 // --------------------------------------------
 
 	// * Database connections *
-	define('DB_NAME',						'');
-	define('DB_USER',						'');
-	define('DB_PASSWORD',					'');
+	define('DB_NAME',						'juegos2013');
+	define('DB_USER',						'root');
+	define('DB_PASSWORD',					'coovxpexrask');
 	define('DB_HOST',						'localhost'); 
 
 

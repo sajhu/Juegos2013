@@ -20,7 +20,7 @@ body {
   font-size: 12px;
   background: #444;
   color: #f2f2f2;
-  font-family: "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana", "Arial", "sans-serif";
+  font-family: "Open Sans", "wf_SegoeUI", "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana", "Arial", "sans-serif";
 }
 a {
   color: #049cdb;
@@ -34,7 +34,7 @@ h3,
 h4,
 h5 {
   line-height: 1.6em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 h1 {

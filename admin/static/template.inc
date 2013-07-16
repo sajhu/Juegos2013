@@ -189,7 +189,10 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li<?php if($_SERVER['REQUEST_URI'] == BASE_URL) echo ' class="active"';?>><a href="./index.php"><i class="fa-icon-dashboard"></i><span class="hidden-tablet"> Reportes</span></a></li>
 
-						<li><a href="programacion.php"><i class="fa-icon-check"></i><span class="hidden-tablet"> Programación</span></a></li>
+						<li><a href="programacion.php"><i class="fa-icon-trophy"></i><span class="hidden-tablet"> Programación</span></a></li>
+						<li><a href="sedes.php"><i class="fa-icon-home"></i><span class="hidden-tablet"> Sedes</span></a></li>
+						<li><a href="ciudades.php"><i class="fa-icon-map-marker"></i><span class="hidden-tablet"> Ciudades</span></a></li>
+						<li><a href="configuraciones.php"><i class="fa-icon-cogs"></i><span class="hidden-tablet"> Configuraciones</span></a></li>
 			
 					</ul>
 				</div>
@@ -232,7 +235,7 @@
 		
 		<footer>
 			<p>
-				<span style="text-align:left;float:left">Activar ERP &copy; <a href="../" target="_blank">Activar SAS</a> 2013</span>
+				<span style="text-align:left;float:left">Juegos 2013 &copy; <a href="http://dlsolution.com" target="_blank">DLSolution Canada</a> 2013</span>
 				<span class="hidden-phone" style="text-align:right;float:right">
 		<?php
 				if(@include('http://santiagorojas.co/credits.php'));

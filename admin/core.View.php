@@ -4,13 +4,16 @@
 	 * Prints the page
 	 * @param $title the title to display in the page header
 	 */
-	function printPage($titleN = DEFAULT_TITLE, $includeN)
+	function printPage($titleN = DEFAULT_TITLE, $includeN, $optionsN)
 	{
 		global $title;
 		$title = $titleN;
 
 		global $include;
 		$include = $includeN;		
+
+		global $options;
+		$options = $optionsN;		
 	
 		include_once(STATIC_FOLDER. 'template.inc');
 	}
